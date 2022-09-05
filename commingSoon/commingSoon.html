@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+  </head>
+
+  <body>
+    <!-- navbar -->
+
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <div class="pointer">
+            <img
+              src="../assets/favicon.png"
+              alt=""
+              style="width: 40px; height: 35px; border-radius: 50%"
+            />
+            <span
+              class="span"
+              style="
+                font-size: 1.7rem;
+                text-align: center;
+                justify-content: center;
+              "
+            >
+              <span style="text-transform: lowercase; color: #ffa500">c</span
+              ><span style="color: #ffffff">oin</span
+              ><span style="color: #ffa500">b</span
+              ><span style="color: #ffffff">on</span
+              ><span style="color: #ffa500">d</span>
+              <span></span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html" target="_blank">Home</a>
+        <a href="https://github.com/Coinbond" target="_blank">Documentation</a>
+        <a href="/Website-coinbond/assets/newcbd.pdf" target="_blank"
+          >Whitepaper</a
+        >
+        <a
+          href="https://bscscan.com/token/0x27AA68F36B9e5220B6D57521CEDf97fFA5B490E0"
+          target="_blank"
+          >Explorer</a
+        >
+        <a href="https://www.coinbond.io/Coming%20soon" target="_blank"
+          >IEO: Coming soon</a
+        >
+        <a
+          href="https://drive.google.com/file/d/1YUi6n49gMUnwj2j19iQ8juie076SR9-r/view"
+          target="_blank"
+          >Airdrop Result : 1st Round</a
+        >
+        <a href="https://t.me/Coinbond_CBD" target="_blank">Join Telegram</a>
+      </div>
+    </div>
+
+    <!-- ---------------------------- -->
+
+    <div id="nav-placeholder"></div>
+    <div class="main">
+      <h1>P2PB2B Exchange IEO Announcement Countdown</h1>
+      <h3>With Giveaway Equivalent of 1,00,000$</h3>
+      <div class="countdown">
+        <div>
+          <span class="number months">00</span>
+          <span>Months</span>
+        </div>
+        <div>
+          <span class="number days">00</span>
+          <span>Days</span>
+        </div>
+        <div>
+          <span class="number hours">00</span>
+          <span>Hours</span>
+        </div>
+        <div>
+          <span class="number minutes">00</span>
+          <span>Minutes</span>
+        </div>
+        <div>
+          <span class="number seconds">00</span>
+          <span>Seconds</span>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0px;
+        font-family: "segoe ui";
+      }
+
+      .nav {
+        height: 50px;
+        position: fixed;
+        width: 100%;
+        background-color: #4c9ffe;
+        /* position: relative; */
+      }
+
+      .nav > .nav-header {
+        display: inline;
+      }
+
+      .nav > .nav-header > .nav-title {
+        display: inline-block;
+        font-size: 22px;
+        color: #fff;
+        padding: 10px 10px 10px 10px;
+      }
+      /* .nav > .nav-header > .nav-title > .span {
+        display: inline;
+        font-size: 1.9rem;
+      } */
+      .nav > .nav-btn {
+        display: none;
+      }
+
+      .nav > .nav-links {
+        display: inline;
+        float: right;
+        font-size: 14px;
+      }
+
+      .nav > .nav-links > a {
+        display: inline-block;
+          margin: 10px 20px 60px 5px;
+        padding: 10px;
+        /*padding: 15px 10px 13px 10px;*/
+        text-decoration: none;
+        color: #efefef;
+      }
+
+      .nav > .nav-links > a:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      .nav > #nav-check {
+        display: none;
+      }
+      
+         .nav > .nav-header > .nav-title > .pointer {
+        display: flex;
+        /* margin: 0 0 50% 0; */
+      }
+
+      @media (max-width: 600px) {
+          
+            .nav > .nav-links > a {
+          margin: 0;
+          /* padding: 0; */
+        }
+        .nav > .nav-btn {
+          display: inline-block;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+        }
+        .nav > .nav-btn > label {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          padding: 13px;
+        }
+        .nav > .nav-btn > label:hover,
+        .nav #nav-check:checked ~ .nav-btn > label {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+        .nav > .nav-btn > label > span {
+          display: block;
+          width: 25px;
+          height: 10px;
+          border-top: 2px solid #eee;
+        }
+        .nav > .nav-links {
+          position: absolute;
+          display: block;
+          width: 100%;
+          background-color: #333;
+          height: 0px;
+          transition: all 0.3s ease-in;
+          overflow-y: hidden;
+          top: 50px;
+          left: 0px;
+        }
+        .nav > .nav-links > a {
+          display: block;
+          width: 100%;
+        }
+        .nav > #nav-check:not(:checked) ~ .nav-links {
+          height: 0px;
+        }
+        .nav > #nav-check:checked ~ .nav-links {
+          height: calc(100vh - 50px);
+          overflow-y: auto;
+        }
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        color: #2c4a64;
+      }
+      .main {
+        height: 100vh;
+        background-size: cover;
+        background: url("https://i.ibb.co/jfLZFhm/Bitmap.png") no-repeat top
+          center;
+      }
+
+      h1 {
+        text-align: center;
+        font-weight: 400;
+        font-size: 40px;
+        padding-top: 5%;
+      }
+      h3 {
+        text-align: center;
+
+        padding-top: 18px;
+      }
+
+      .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .countdown > div {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4%;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.25);
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+      }
+      .number {
+        font-weight: 500;
+        font-size: 44px;
+        color: #caa78c;
+      }
+
+      div span:last-of-type {
+        font-size: 12px;
+      }
+
+      @media screen and (max-width: 600px) {
+        h1 {
+          text-align: center;
+          font-weight: 700;
+          font-size: 20px;
+          padding-top: 20%;
+        }
+        h3 {
+          text-align: center;
+          font-size: 15px;
+          padding-top: 18px;
+        }
+        .countdown {
+          gap: 10px;
+          margin-top: 4%;
+        }
+        .countdown > div {
+          width: 60px;
+          height: 80px;
+        }
+
+        .number {
+          font-size: 34px;
+        }
+      }
+    </style>
+    
+    
+    <script>
+      const newDate = new Date("sept 07 22 06:00:00").getTime();
+      const countdown = setInterval(() => {
+        const date = new Date().getTime();
+        const diff = newDate - date;
+
+        const month = Math.floor(
+          (diff % (1000 * 60 * 60 * 24 * (365.25 / 12) * 365)) /
+            (1000 * 60 * 60 * 24 * (365.25 / 12))
+        );
+        const days = Math.floor(
+          (diff % (1000 * 60 * 60 * 24 * (365.25 / 12))) / (1000 * 60 * 60 * 24)
+        );
+        const hours = Math.floor(
+          (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.querySelector(".seconds").innerHTML =
+          seconds < 10 ? "0" + seconds : seconds;
+        document.querySelector(".minutes").innerHTML =
+          minutes < 10 ? "0" + minutes : minutes;
+        document.querySelector(".hours").innerHTML =
+          hours < 10 ? "0" + hours : hours;
+        document.querySelector(".days").innerHTML =
+          days < 10 ? "0" + days : days;
+        document.querySelector(".months").innerHTML =
+          month < 10 ? "0" + month : month;
+
+        if (diff === 0) {
+          clearInterval(countdown);
+          document.querySelector(".countdown").innerHTML = 'Times Up !';
+        }
+      }, 1000);
+
+      // nav menu
+    </script>
+
+  </body>
+  <!--<script src='count.js'> -->
+</html>
